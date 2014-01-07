@@ -31,7 +31,6 @@ set user_view_url "/intranet/users/view"
 
 
 set current_year [db_string current_year "select to_char(now(), 'YYYY')"]
-
 set start_of_year "$current_year-01-01"
 set end_of_year "$current_year-12-31"
 
@@ -143,5 +142,10 @@ db_multirow -extend { days_absence days_booking } overtime_balance_multirow over
 		set days_absence -
 	}
 }
+
+# -------------------
+# Form for entry of new overtime
+# -------------------
+
 
 ad_return_template
